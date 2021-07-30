@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /*hIDE SCROLL BAR*/
+    margin: 0;
+}
+
+.container
+{
+    display: flex;
+    width: 40vw;;
+}
+
+.pannel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition:  flex 0.7s ease-in;
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.75);
+}
+
+.pannel h3 {
+    font-size:  24px;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0;
+    opacity: 0;
+}
+
+.pannel.active{
+    flex: 5;
+}
+
+.pannel.active h3
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.holiday
+{
+    position: absolute;
+    top: 1rem;
+    margin: 0 auto;
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.75);
+    border-radius:  50px;
+    padding: 0.4em;
+}
+@media(max-width: 480px){
+    .container {
+        width: 100vw;
+    }
+
+    .pannel:nth-of-type(4), 
+    .pannel:nth-of-type(5)
+    {
+        display: none;
+    } 
+
+    .pannel h3{
+    bottom: 1rem;
+    left: 4 rem;
+    }
+    .holiday{
+        padding: 0.23rem;
+    }
+}
+
